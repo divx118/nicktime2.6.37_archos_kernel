@@ -23,6 +23,7 @@
  */
 
 ENTRY(omap_smc1)
+	.arch_extension sec
 	stmfd   sp!, {r2-r12, lr}
 	mov	r12, r0
 	mov 	r0, r1
@@ -32,6 +33,7 @@ ENTRY(omap_smc1)
 END(omap_smc1)
 
 ENTRY(omap_modify_auxcoreboot0)
+	.arch_extension sec
 	stmfd   sp!, {r1-r12, lr}
 	ldr	r12, =0x104
 	dsb
@@ -40,6 +42,7 @@ ENTRY(omap_modify_auxcoreboot0)
 END(omap_modify_auxcoreboot0)
 
 ENTRY(omap_auxcoreboot_addr)
+	.arch_extension sec
 	stmfd   sp!, {r2-r12, lr}
 	ldr	r12, =0x105
 	dsb
@@ -48,6 +51,7 @@ ENTRY(omap_auxcoreboot_addr)
 END(omap_auxcoreboot_addr)
 
 ENTRY(omap_read_auxcoreboot0)
+	.arch_extension sec
 	stmfd   sp!, {r2-r12, lr}
 	ldr	r12, =0x103
 	dsb
