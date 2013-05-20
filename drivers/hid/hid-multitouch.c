@@ -813,6 +813,12 @@ static const struct hid_device_id mt_devices[] = {
 	{ .driver_data = MT_CLS_DEFAULT,
 		HID_USB_DEVICE(USB_VENDOR_ID_UNITEC,
 			USB_DEVICE_ID_UNITEC_USB_TOUCH_0A19) },
+	{ .driver_data = MT_CLS_DEFAULT,
+                HID_USB_DEVICE(USB_VENDOR_ID_UNITEC,
+                        USB_DEVICE_ID_UNITEC_10_TS_V0) },
+        { .driver_data = MT_CLS_DEFAULT,
+                HID_USB_DEVICE(USB_VENDOR_ID_UNITEC,
+                        USB_DEVICE_ID_UNITEC_10_TS_V1) },
 
 	{ }
 };
